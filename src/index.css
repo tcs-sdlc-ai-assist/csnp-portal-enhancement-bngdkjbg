@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans leading-relaxed min-h-screen;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-csnp-primary tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-csnp-primary tracking-tight;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-csnp-blue-800;
+  }
+
+  h4 {
+    @apply text-lg font-medium text-csnp-blue-700;
+  }
+
+  a {
+    @apply text-csnp-primary-light hover:text-csnp-primary transition-colors duration-200;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-400
+      focus:outline-none focus:ring-2 focus:ring-csnp-primary-light focus:border-transparent
+      transition-shadow duration-200;
+  }
+
+  button {
+    @apply transition-colors duration-200;
+  }
+
+  label {
+    @apply text-sm font-medium text-gray-700;
+  }
+
+  ::selection {
+    @apply bg-csnp-blue-200 text-csnp-primary-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-csnp-primary text-white px-4 py-2 rounded-lg font-medium
+      hover:bg-csnp-primary-dark focus:outline-none focus:ring-2 focus:ring-csnp-primary-light focus:ring-offset-2
+      disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-csnp-secondary text-white px-4 py-2 rounded-lg font-medium
+      hover:bg-csnp-secondary-dark focus:outline-none focus:ring-2 focus:ring-csnp-secondary-light focus:ring-offset-2
+      disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-csnp-primary text-csnp-primary px-4 py-2 rounded-lg font-medium bg-transparent
+      hover:bg-csnp-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-csnp-primary-light focus:ring-offset-2
+      disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-6 hover:shadow-card-hover transition-shadow duration-200;
+  }
+
+  .alert-success {
+    @apply bg-csnp-alert-success-light border border-csnp-alert-success text-green-800 px-4 py-3 rounded-lg text-sm;
+  }
+
+  .alert-warning {
+    @apply bg-csnp-alert-warning-light border border-csnp-alert-warning text-yellow-800 px-4 py-3 rounded-lg text-sm;
+  }
+
+  .alert-error {
+    @apply bg-csnp-alert-error-light border border-csnp-alert-error text-red-800 px-4 py-3 rounded-lg text-sm;
+  }
+
+  .alert-info {
+    @apply bg-csnp-alert-info-light border border-csnp-alert-info text-blue-800 px-4 py-3 rounded-lg text-sm;
+  }
+}
